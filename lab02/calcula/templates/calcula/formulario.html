@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h2>{{ titulo }}</h2>
+    <form action="{% url 'calcula:enviar' %}" method="post">
+        {% csrf_token %}
+        Primer Numero:
+        <input type="number" name="num1" maxlength="50"><br>
+        Segundo Numero:
+        <input type="number" name="num2"><br>
+        Operación:
+        <select name="operacion" id="operacion">
+            <option value="suma">Suma</option>
+            <option value="resta">Resta</option>
+            <option value="multiplicacion">Multiplicación</option>
+        </select> <br>
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+</html>

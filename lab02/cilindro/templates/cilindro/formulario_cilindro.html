@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Volumen de un Cilindro</title>
+</head>
+<body>
+    <h2>Cálculo de Volumen de un Cilindro</h2>
+    <form action="{% url 'cilindro:calcular' %}" method="post">
+        {% csrf_token %}
+        Introduzca el diámetro en metros:
+        <input type="number" step="any" name="altura" required><br>
+        Introduzca la altura en metros:
+        <input type="number" step="any" name="diametro" required><br>
+        <button type="submit">Calcular Volumen</button>
+    </form>
+</body>
+</html>

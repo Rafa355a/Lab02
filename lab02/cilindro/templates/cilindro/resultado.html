@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado del Cálculo</title>
+</head>
+<body>
+    <h2>Resultado del Cálculo</h2>
+    <p>
+        {% if volumen %}
+            El volumen del cilindro es de {{ volumen }} metros cúbicos.
+        {% else %}
+            Aún no se ha calculado el volumen del cilindro.
+        {% endif %}
+    </p>
+    <a href="{% url 'cilindro:formulario' %}">Calcular otro volumen</a>
+</body>
+</html>
